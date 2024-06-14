@@ -1,0 +1,24 @@
+CompileFlags:
+  Add: [-std=c++20, -Wall] 
+  CompilationDatabase: "./build/"
+
+Diagnostics:
+  ClangTidy:
+    Add: [
+      modernize-*, 
+      bugprone-*, 
+      performance-*, 
+      cppcoreguidelines-*,
+      misc-*,
+
+      zircon-temporary-objects,
+
+    ]
+    Remove: [
+      modernize-use-trailing-return-type,
+      cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+      misc-non-private-member-variables-in-classes,
+      cppcoreguidelines-pro-bounds-pointer-arithmetic,
+    ]
+    CheckOptions:
+      readability-identifier-naming.VariableCase: snake_case

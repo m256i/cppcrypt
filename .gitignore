@@ -1,0 +1,5 @@
+.cache/*
+build/*
+gmp-6.3.0/*
+ecctest.py
+.vscode/settings.json
